@@ -6,7 +6,7 @@ export const Header = () => `
 ${ButtonColor()}
 `;
 export const changeBackground = () => {
-  const themeBtn = document.querySelector("#myntncolor");
+  const themeBtn = document.querySelector("#mybtncolor");
   themeBtn.addEventListener("click", () => {
     let numaleat = Math.floor(Math.random() * ColoresFondo.length);
     //console.log(numaleat);
