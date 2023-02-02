@@ -1,0 +1,14 @@
+.headerpokedex{
+    height: 10vh;
+    display: flex;
+    padding: 0 4rem;
+    align-items: center;
+    padding: 4 rem;
+    gap: 2rem;
+}
+
+.containerpoke{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
