@@ -175,7 +175,9 @@ const addListeners = () => {
   document.querySelector("#backHomeBtn").addEventListener("click", () => {
     HomeTemplate();
   });
-
+  document.querySelector("#botonAll").addEventListener("click", () => {
+    mapPokemons(arraypokemon);
+  });
   document.querySelector("#grass").addEventListener("click", () => {
     filterPokemons(allPokemons, "grass");
     //console.log("click");
@@ -184,8 +186,44 @@ const addListeners = () => {
   document.querySelector("#normal").addEventListener("click", () => {
     filterPokemons(allPokemons, "normal");
   });
-  document.querySelector("#botonAll").addEventListener("click", () => {
-    mapPokemons(arraypokemon);
+  document.querySelector("#fire").addEventListener("click", () => {
+    filterPokemons(allPokemons, "fire");
+  });
+  document.querySelector("#water").addEventListener("click", () => {
+    filterPokemons(allPokemons, "water");
+  });
+  document.querySelector("#bug").addEventListener("click", () => {
+    filterPokemons(allPokemons, "bug");
+  });
+  document.querySelector("#poison").addEventListener("click", () => {
+    filterPokemons(allPokemons, "poison");
+  });
+  document.querySelector("#electric").addEventListener("click", () => {
+    filterPokemons(allPokemons, "electric");
+  });
+  document.querySelector("#ground").addEventListener("click", () => {
+    filterPokemons(allPokemons, "ground");
+  });
+  document.querySelector("#fairy").addEventListener("click", () => {
+    filterPokemons(allPokemons, "fairy");
+  });
+  document.querySelector("#fighting").addEventListener("click", () => {
+    filterPokemons(allPokemons, "fighting");
+  });
+  document.querySelector("#psychic").addEventListener("click", () => {
+    filterPokemons(allPokemons, "psychic");
+  });
+  document.querySelector("#rock").addEventListener("click", () => {
+    filterPokemons(allPokemons, "rock");
+  });
+  document.querySelector("#ghost").addEventListener("click", () => {
+    filterPokemons(allPokemons, "ghost");
+  });
+  document.querySelector("#ice").addEventListener("click", () => {
+    filterPokemons(allPokemons, "ice");
+  });
+  document.querySelector("#dragon").addEventListener("click", () => {
+    filterPokemons(allPokemons, "dragon");
   });
 };
 
