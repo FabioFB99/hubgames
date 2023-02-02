@@ -11,4 +11,44 @@
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem
+}
+
+.containerpoke > figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem ;
+
+}
+.containerpoke > figure > img{
+    width: 100px;
+    height: 100px;
+}
+
+.tipos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.tipos > img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.tipo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tipo > img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
