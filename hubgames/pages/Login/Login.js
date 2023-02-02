@@ -1,16 +1,25 @@
 import "./Login.css";
-import { cleanPage } from "../../utils/cleanPage";
-import { NormalButton } from "../../components/NormalButton/NormalButton";
-export const Login = () => {
-  const main = document.querySelector("main");
-  cleanPage(main);
-  main.innerHTML = `
-  <div class="login">
-          <h1>Neoland</h1>
-          <h1>Hub-Games</h1>
-          <p>Introduce tu Usuario y Contraseña</p>
-          <input type="text" id="Usuario">
-          <input type="password"  id="passwordLogin">
-          ${NormalButton("👍", "login")}
- </div>`;
+import { printTemplate as HomeTemplate } from "../Home/Home";
+const template = () =>
+  `
+<section class="login">
+<h2>Neoland</h2>
+<h2>Hub-Games</h2>
+<p>Introduce tu nombre</p>
+<input type="text" id="loginInput"/>
+<button id="loginBtn" class="my-btn">Login</button>
+</section>`;
+const addListeners = () => {
+  const loginInput = document.querySelector("#loginInput");
+  document.querySelector("#loginBtn").addEventListener("click", () => {
+    localStorage.setItem("user", loginInput.value);
+    if (loginInput.value) {
+      HomeTemplate();
+    }
+  });
+};
+
+export const printTemplate = () => {
+  document.querySelector("#main").innerHTML = template();
+  addListeners();
 };
