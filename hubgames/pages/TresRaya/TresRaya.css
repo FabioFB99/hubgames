@@ -1,0 +1,10 @@
+.juegotr > button{
+    width: 200px;
+    height: 200px;
+}
+.juegotr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 600px;
+    margin: auto;
+}

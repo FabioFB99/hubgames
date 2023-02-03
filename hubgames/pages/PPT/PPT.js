@@ -3,7 +3,7 @@ import { printTemplate as HomeTemplate } from "../Home/Home";
 const elementos = ["piedra", "papel", "tijera"];
 let oponente = "";
 const template = () => `
-<div class="contenedorgeneral"> 
+<div class="contenedorgeneralppt"> 
     <div class="headerppt"> 
         <h1>Piedra Papel Tijera</h1>
         <button id="backHomeBtn" class="my-btn">Back Home</button>
