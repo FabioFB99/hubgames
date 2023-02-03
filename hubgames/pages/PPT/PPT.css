@@ -1,0 +1,10 @@
+.ppt {
+    height: 90vh;
+    display: flex;
+    padding: 0 4rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 4 rem;
+    gap: 2rem;
+
+}

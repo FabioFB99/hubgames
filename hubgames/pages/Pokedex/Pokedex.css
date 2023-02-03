@@ -52,3 +52,9 @@
     width: 50px;
     border-radius: 50%;
 }
+
+.buscador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -141,6 +141,10 @@ const template = () => `
         <h1>Pokedex</h1>
         <button id="backHomeBtn" class="my-btn">Back Home</button>
     </div>
+    <div class="buscador">
+    <h3>Busca tu pokemon: </h3>
+    <input type="text" id="buscadorpokemon">
+    </div>
     <div class="filter">
       <button id="botonAll" class="my-btnpoke">Todos los pokemons</button>
       <button id="grass" class="my-btnpoke">Grass</button>
