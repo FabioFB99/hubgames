@@ -1,0 +1,1 @@
+import "./Quest.css";
