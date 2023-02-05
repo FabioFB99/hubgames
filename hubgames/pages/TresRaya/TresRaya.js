@@ -8,6 +8,7 @@ const template = () => `
         <h1>Tres en Raya</h1>
         <button id="backHomeBtn" class="my-btn">Back Home</button>
      </div>
+     <div class="resultado" id="resu"></div>
      <div class="juegotr">
       <button id="btnjuego" value ="0"></button>
       <button id="btnjuego" value ="1"></button>
@@ -19,20 +20,60 @@ const template = () => `
       <button id="btnjuego" value ="7"></button>
       <button id="btnjuego" value ="8"></button>
      </div>
+     
 </div>
 `;
 const Resultado = (array) => {
   if (
     array[0] == array[1] &&
     array[0] == array[2] &&
-    array[0] == array[3] &&
     (array[0] == "red" || array[0] == "blue")
   ) {
+    document.querySelector(
+      "#resu"
+    ).innerHTML = `<h1>Ha ganado el de color ${array[0]}</h1>`;
+  }
+  if (
+    array[3] == array[4] &&
+    array[3] == array[5] &&
+    (array[3] == "red" || array[3] == "blue")
+  ) {
+    document.querySelector(
+      "#resu"
+    ).innerHTML = `<h1>Ha ganado el de color ${array[3]}</h1>`;
+  }
+  if (
+    array[6] == array[7] &&
+    array[6] == array[8] &&
+    (array[6] == "red" || array[6] == "blue")
+  ) {
+    document.querySelector(
+      "#resu"
+    ).innerHTML = `<h1>Ha ganado el de color ${array[6]}</h1>`;
+  }
+  if (
+    array[0] == array[4] &&
+    array[0] == array[8] &&
+    (array[0] == "red" || array[0] == "blue")
+  ) {
+    document.querySelector(
+      "#resu"
+    ).innerHTML = `<h1>Ha ganado el de color ${array[0]}</h1>`;
+  }
+  if (
+    array[2] == array[4] &&
+    array[2] == array[6] &&
+    (array[2] == "red" || array[2] == "blue")
+  ) {
+    document.querySelector(
+      "#resu"
+    ).innerHTML = `<h1>Ha ganado el de color ${array[0]}</h1>`;
   }
 };
+
 const BotonPulsado = (ebtn) => {
   turno++;
-  color = turno % 2 ? "blue" : "red";
+  let color = turno % 2 ? "blue" : "red";
   ebtn.target.style.backgroundColor = color;
   //console.log(ebtn.target.value);
   posiciones[ebtn.target.value] = color;
