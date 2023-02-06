@@ -9,11 +9,9 @@
 }
 .contenedorjuegos{
 
-            display: flex;
-            padding: 0 4rem;
-            align-items: center;
-            padding: 4 rem;
-            gap: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
     
       
 }

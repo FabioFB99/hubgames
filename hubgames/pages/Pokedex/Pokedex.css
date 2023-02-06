@@ -1,3 +1,25 @@
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-btnpoke{
+    background: none;
+        border: 1px solid whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        width: 4rem;
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+        transition: all 0.5s ease-in-out;
+        background-color: black;
+}
+.my-btnpoke:hover {
+    color: red;
+    border: 1px solid red;
+}
 .headerpokedex{
     height: 10vh;
     display: flex;
@@ -57,4 +79,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media (max-width: 1175px){
+    .containerpoke {
+    
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem
+        }
+}
+@media (max-width: 952px) {
+    .containerpoke {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem
+    }
+}
+@media (max-width: 700px) {
+    .containerpoke {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 2rem
+    }
 }

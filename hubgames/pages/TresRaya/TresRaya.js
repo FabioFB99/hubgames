@@ -32,6 +32,7 @@ const Resultado = (array) => {
     document.querySelector(
       "#resu"
     ).innerHTML = `<h1>Ha ganado el de color ${array[0]}</h1>`;
+    document.body.style.backgroundColor = array[0];
   }
   if (
     array[3] == array[4] &&
@@ -41,6 +42,7 @@ const Resultado = (array) => {
     document.querySelector(
       "#resu"
     ).innerHTML = `<h1>Ha ganado el de color ${array[3]}</h1>`;
+    document.body.style.backgroundColor = array[3];
   }
   if (
     array[6] == array[7] &&
@@ -50,6 +52,7 @@ const Resultado = (array) => {
     document.querySelector(
       "#resu"
     ).innerHTML = `<h1>Ha ganado el de color ${array[6]}</h1>`;
+    document.body.style.backgroundColor = array[6];
   }
   if (
     array[0] == array[4] &&
@@ -59,6 +62,7 @@ const Resultado = (array) => {
     document.querySelector(
       "#resu"
     ).innerHTML = `<h1>Ha ganado el de color ${array[0]}</h1>`;
+    document.body.style.backgroundColor = array[0];
   }
   if (
     array[2] == array[4] &&
@@ -67,7 +71,8 @@ const Resultado = (array) => {
   ) {
     document.querySelector(
       "#resu"
-    ).innerHTML = `<h1>Ha ganado el de color ${array[0]}</h1>`;
+    ).innerHTML = `<h1>Ha ganado el de color ${array[2]}</h1>`;
+    document.body.style.backgroundColor = array[2];
   }
 };
 

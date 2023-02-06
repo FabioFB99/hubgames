@@ -8,3 +8,28 @@
     width: 600px;
     margin: auto;
 }
+@media (max-width: 750px){
+    .juegotr>button {
+            width: 150px;
+            height: 150px;
+        }
+    .juegotr {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 450px;
+        margin: auto;
+    }
+}
+@media (max-width: 600px) {
+    .juegotr>button {
+        width: 100px;
+        height: 100px;
+    }
+
+    .juegotr {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 300px;
+        margin: auto;
+    }
+}

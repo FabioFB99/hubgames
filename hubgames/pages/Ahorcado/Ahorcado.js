@@ -20,7 +20,7 @@ const template = () => `
         <button id="probar" class="my-btn">👍</button>
         
         <h1 id ="palabraahorcadoempty"></h1>
-        <h1 class = "palabraahorcado" id ="palabraahorcado">Letras que contiene: </h1>
+        <h1 class = "palabraahorcado" id ="palabraahorcado">¿palabra? </h1>
          <h1 class = "palabraahorcado" id ="nopalabraahorcado">Letras que no contiene: </h1>
         <h3 id="jugadaoponente"></h3>
         <h1 id="resultado"></h1>
@@ -59,6 +59,7 @@ const ahorc = (letra) => {
       palabracomprobar += element;
       if (palabracomprobar.toLocaleLowerCase() == palabra.toLocaleLowerCase()) {
         document.querySelector("#resultado").innerHTML = `Has ganado el juego`;
+        document.body.style.backgroundColor = "green";
       }
     }
   } else {
@@ -69,7 +70,9 @@ const ahorc = (letra) => {
       document.querySelector("#nopalabraahorcado").innerHTML += `${letra}`;
     }
     if (cont == 0 && arrayvaciopalabra != palabrasplit) {
+      document.querySelector("#intentos").innerHTML = `${cont}`;
       document.querySelector("#resultado").innerHTML = `Has perdido el juego`;
+      document.body.style.backgroundColor = "red";
     }
   }
 };
