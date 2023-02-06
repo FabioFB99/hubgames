@@ -174,10 +174,24 @@ const filterPokemons = (pokemons, tipo) => {
   //console.log(filteredPokemons);
   printPokemons(filteredPokemons);
 };
+const filterPokemonsSearch = (pokemons, name) => {
+  const filteredPokemons = pokemons.filter((pokemon) =>
+    pokemon.name.includes(name)
+  );
+  //console.log(filteredPokemons);
+  printPokemons(filteredPokemons);
+};
 
 const addListeners = () => {
   document.querySelector("#backHomeBtn").addEventListener("click", () => {
     HomeTemplate();
+  });
+  document.querySelector("#buscadorpokemon").addEventListener("input", () => {
+    filterPokemonsSearch(
+      allPokemons,
+      document.querySelector("#buscadorpokemon").value
+    );
+    //console.log("click");
   });
   document.querySelector("#botonAll").addEventListener("click", () => {
     mapPokemons(arraypokemon);
