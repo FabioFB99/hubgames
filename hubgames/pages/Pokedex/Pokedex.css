@@ -87,6 +87,12 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 2rem
         }
+    .filter {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 1rem
+    
+    }
 }
 @media (max-width: 952px) {
     .containerpoke {
@@ -102,5 +108,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr ;
         gap: 2rem
+    }
+    .filter{
+        display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 0.5rem
     }
 }
