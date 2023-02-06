@@ -14,7 +14,7 @@ const template = () => `
      <div class="juegoahorcado">
         <div class="intentoss">
             <h1>Numero de intentos restantes</h1>
-            <h1 id ="intentos"></h1>
+            <h1 id ="intentos"> ${cont}</h1>
         </div>
         <input type="text" id="letra">
         <button id="probar" class="my-btn">👍</button>
@@ -27,7 +27,9 @@ const template = () => `
      </div>
 </div>
 `;
-
+for (let i = 0; i < palabrasplit.length; i++) {
+  arrayvaciopalabra.push("");
+}
 // juan contiene j si => guardar => pintar
 const ahorc = (letra) => {
   if (
@@ -36,14 +38,38 @@ const ahorc = (letra) => {
     cont != 0
   ) {
     console.log(letra);
-    arrayvaciopalabra.push(letra.toLowerCase());
-    document.querySelector("#palabraahorcado").innerHTML += `${letra}`;
+    for (let i = 0; i < palabrasplit.length; i++) {
+      if (letra == palabrasplit[i]) {
+        arrayvaciopalabra[i] = letra;
+      }
+    }
+    document.querySelector("#palabraahorcado").innerHTML = ``;
+    for (let i = 0; i < arrayvaciopalabra.length; i++) {
+      if (arrayvaciopalabra[i] == "") {
+        document.querySelector("#palabraahorcado").innerHTML += `_`;
+      } else {
+        document.querySelector(
+          "#palabraahorcado"
+        ).innerHTML += `${arrayvaciopalabra[i]}`;
+      }
+    }
+    let palabracomprobar = "";
+    for (let i = 0; i < arrayvaciopalabra.length; i++) {
+      const element = arrayvaciopalabra[i];
+      palabracomprobar += element;
+      if (palabracomprobar.toLocaleLowerCase() == palabra.toLocaleLowerCase()) {
+        document.querySelector("#resultado").innerHTML = `Has ganado el juego`;
+      }
+    }
   } else {
     cont--;
     if (cont != 0) {
       arrayletrasnocontiene.push(letra.toLowerCase());
       document.querySelector("#intentos").innerHTML = `${cont}`;
       document.querySelector("#nopalabraahorcado").innerHTML += `${letra}`;
+    }
+    if (cont == 0 && arrayvaciopalabra != palabrasplit) {
+      document.querySelector("#resultado").innerHTML = `Has perdido el juego`;
     }
   }
 };
@@ -52,7 +78,7 @@ const addListeners = () => {
     HomeTemplate();
   });
   document.querySelector("#probar").addEventListener("click", () => {
-    ahorc(document.querySelector("#letra").value);
+    ahorc(document.querySelector("#letra").value.toLowerCase());
     //console.log(palabrasplit);
   });
 };
